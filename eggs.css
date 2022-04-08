@@ -1,0 +1,42 @@
+@keyframes exampleAnimation {
+    0%, 100% {background-size: 0 0;}
+    0%, 30%, 39%, 45%, 51%, 57%, 62%, 66%, 70%, 87% {transform: translateY(0);}
+    20%, 25% {transform: translateY(-75px);}
+    36% {transform: translateY(-32px);}
+    42% {transform: translateY(-12px);}
+    48% {transform: translateY(-10px);}
+    54% {transform: translateY(-7px);}
+    60% {transform: translateY(-3px);}
+    64% {transform: translateY(-2px);}
+    68% {transform: translateY(-1px);}
+    20%, 87% {background-size: 100px 100px;}
+    100% {transform: translateY(150px);}
+}
+@keyframes exampleAnimation2 {
+    0%, 100% {background-size: 0 0;}
+    0%, 100% {transform: translateY(0);}
+    20%, 87% {background-size: 70px 70px;}
+}
+.image1 {
+    background-image: url(img/1.png);
+}
+.image2 {
+    background-image: url(img/2.png);
+}
+.image3 {
+    background-image: url(img/3.png);
+}
+.image4 {
+    background-image: url(img/4.png);
+    background-position: calc(50%);
+    animation: exampleAnimation 3s forwards, exampleAnimation2 5s 3s forwards;
+}
+.image5 {
+    background-image: url(img/5.png);
+}
+.image6 {
+    background-image: url(img/6.png);
+}
+.image7 {
+    background-image: url(img/7.png);
+}
