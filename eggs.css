@@ -1,6 +1,6 @@
-@keyframes exampleAnimation {
-    0%, 100% {background-size: 0 0;}
-    0%, 30%, 39%, 45%, 51%, 57%, 62%, 66%, 70%, 87% {transform: translateY(0);}
+@keyframes anim1a {
+    0% {background-size: 0 0;}
+    0%, 30%, 39%, 45%, 51%, 57%, 62%, 66%, 100%, 87% {transform: translateY(0);}
     20%, 25% {transform: translateY(-75px);}
     36% {transform: translateY(-32px);}
     42% {transform: translateY(-12px);}
@@ -10,33 +10,47 @@
     64% {transform: translateY(-2px);}
     68% {transform: translateY(-1px);}
     20%, 87% {background-size: 100px 100px;}
-    100% {transform: translateY(150px);}
 }
-@keyframes exampleAnimation2 {
-    0%, 100% {background-size: 0 0;}
-    0%, 100% {transform: translateY(0);}
-    20%, 87% {background-size: 70px 70px;}
+@keyframes anim1b {
+    100% {background-size: 0 0;}
+}
+@keyframes anim2 {
+    0%, 100% {transform: scale(70%);}
+    12%, 88% {transform: scale(100%);}
+    8%, 92% {background-position-y: 0px;}
+}
+@keyframes anim4 {
+    0%, 100% {transform: scale(70%);}
+    12%, 88% {transform: scale(100%);}
+    8%, 92% {background-position-y: 0px; -webkit-mask-position: 50% 0px; mask-position: 50% 0px;}
 }
 .image1 {
     background-image: url(img/1.png);
+    background-position: 50%;
+    animation: anim1a 3s forwards, anim1b 1s 7s forwards;
 }
 .image2 {
     background-image: url(img/2.png);
+    background-position-y: 100px;
+    animation: anim2 8s;
 }
 .image3 {
     background-image: url(img/3.png);
 }
 .image4 {
-    background-image: url(img/4.png);
-    background-position: calc(50%);
-    animation: exampleAnimation 3s forwards, exampleAnimation2 5s 3s forwards;
+    background-image: url(img/4_anim.gif);
+    background-position-y: 100px;
+    -webkit-mask-image: url(img/4_mask.png);
+    mask-image: url(img/4_mask.png);
+    -webkit-mask-size: 100%;
+    mask-position: 50% 100px;
+    -webkit-mask-position: 50% 100px;
+    mask-size: 100%;
+    animation: anim4 8s;
 }
 .image5 {
     background-image: url(img/5.png);
 }
 .image6 {
     background-image: url(img/6.png);
-}
-.image7 {
-    background-image: url(img/7.png);
 }
