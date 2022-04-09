@@ -19,11 +19,6 @@
     12%, 88% {transform: scale(100%);}
     8%, 92% {background-position-y: 0px;}
 }
-@keyframes anim4 {
-    0%, 100% {transform: scale(70%);}
-    12%, 88% {transform: scale(100%);}
-    8%, 92% {background-position-y: 0px; -webkit-mask-position: 50% 0px; mask-position: 50% 0px;}
-}
 .image1 {
     background-image: url(img/1.png);
     background-position: 50%;
@@ -40,13 +35,7 @@
 .image4 {
     background-image: url(img/4_anim.gif);
     background-position-y: 100px;
-    -webkit-mask-image: url(img/4_mask.png);
-    mask-image: url(img/4_mask.png);
-    -webkit-mask-size: 100%;
-    mask-position: 50% 100px;
-    -webkit-mask-position: 50% 100px;
-    mask-size: 100%;
-    animation: anim4 8s;
+    animation: anim2 8s;
 }
 .image5 {
     background-image: url(img/5.png);
